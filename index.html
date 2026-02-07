@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy of Selling — The Shift</title>
+    <meta name="description" content="Stop pushing. Stop convincing. Start sharing value — and watch sales happen naturally.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f9fafb;
+            --accent: #fef3c7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--bg);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: var(--primary-dark);
+        }
+        
+        .cta-note {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 60px 0;
+            background: var(--bg-alt);
+        }
+        
+        .problem h2 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .problem-list {
+            list-style: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .problem-list li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .problem-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+        
+        .problem-footer {
+            text-align: center;
+            margin-top: 32px;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        /* Shift Section */
+        .shift {
+            padding: 60px 0;
+        }
+        
+        .shift h2 {
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .shift-list {
+            list-style: none;
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+        
+        .shift-list li {
+            padding: 12px 0;
+            padding-left: 32px;
+            position: relative;
+        }
+        
+        .shift-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .shift-words {
+            text-align: center;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        /* Guide Section */
+        .guide {
+            padding: 60px 0;
+            background: var(--bg-alt);
+        }
+        
+        .guide h2 {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+        
+        .guide-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+        
+        .guide-features {
+            list-style: none;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .guide-features li {
+            padding: 16px 0;
+            padding-left: 40px;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .guide-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .guide-features li::before {
+            position: absolute;
+            left: 0;
+            font-size: 1.25rem;
+        }
+        
+        .guide-features li:nth-child(1)::before { content: "📖"; }
+        .guide-features li:nth-child(2)::before { content: "🔄"; }
+        .guide-features li:nth-child(3)::before { content: "🎯"; }
+        .guide-features li:nth-child(4)::before { content: "🛠️"; }
+        .guide-features li:nth-child(5)::before { content: "🚀"; }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .pricing h2 {
+            font-size: 1.75rem;
+            margin-bottom: 32px;
+        }
+        
+        .price-card {
+            background: var(--bg);
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .price-note {
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+        
+        .price-includes {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        
+        .price-includes li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+        }
+        
+        .price-includes li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: var(--bg-alt);
+        }
+        
+        .about h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .about p {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-light);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .footer-quote {
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        
+        .footer a {
+            color: var(--text-light);
+        }
+        
+        /* Social Links */
+        .social-links {
+            margin-top: 24px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 8px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>What If Selling Could Feel Like Giving?</h1>
+            <p>Stop pushing. Stop convincing. Start sharing value — and watch sales happen naturally.</p>
+            <a href="#buy" class="cta-button">Get The Shift — $27</a>
+            <p class="cta-note">PDF Guide • Instant Download • Lifetime Access</p>
+        </div>
+    </section>
+    
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2>You Know Selling Is Important.<br>So Why Does It Feel So Wrong?</h2>
+            <ul class="problem-list">
+                <li><strong>Pushy</strong> — Like you're trying to convince someone who doesn't want to be convinced</li>
+                <li><strong>Manipulative</strong> — Using tactics that feel gross, even if they "work"</li>
+                <li><strong>Exhausting</strong> — Every sales conversation drains your energy</li>
+                <li><strong>Inconsistent</strong> — You avoid selling, so you don't make enough sales</li>
+            </ul>
+            <p class="problem-footer">You're not bad at selling.<br>You've just been taught the wrong way to do it.</p>
+        </div>
+    </section>
+    
+    <!-- Shift -->
+    <section class="shift">
+        <div class="container">
+            <h2>There's Another Way</h2>
+            <ul class="shift-list">
+                <li><strong>Generous</strong> — Sharing something valuable with someone who needs it</li>
+                <li><strong>Natural</strong> — A conversation, not a pitch</li>
+                <li><strong>Energizing</strong> — Leaving you feeling good, not drained</li>
+                <li><strong>Effective</strong> — Making more sales by trying less hard</li>
+            </ul>
+            <p class="shift-words">
+                From pushing to serving.<br>
+                From convincing to sharing.<br>
+                From scarcity to abundance.
+            </p>
+        </div>
+    </section>
+    
+    <!-- Guide -->
+    <section class="guide">
+        <div class="container">
+            <h2>The Joy of Selling — The Shift</h2>
+            <p class="guide-subtitle">A practical guide to transforming your relationship with selling.</p>
+            <ul class="guide-features">
+                <li><strong>Why selling feels wrong</strong> — And why it doesn't have to</li>
+                <li><strong>The mindset shift</strong> — From "closing deals" to "opening possibilities"</li>
+                <li><strong>5 Principles of Joyful Selling</strong> — The beliefs that change everything</li>
+                <li><strong>7-Day Practice</strong> — Daily micro-shifts to embody the new approach</li>
+                <li><strong>The invitation</strong> — How to keep going after the guide</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Pricing -->
+    <section class="pricing" id="buy">
+        <div class="container">
+            <h2>Simple Pricing. Real Transformation.</h2>
+            <div class="price-card">
+                <div class="price-amount">$27</div>
+                <p class="price-note">One guide. Zero fluff.</p>
+                <ul class="price-includes">
+                    <li>Complete PDF Guide (15+ pages)</li>
+                    <li>5 Principles of Joyful Selling</li>
+                    <li>7-Day Practice with daily shifts</li>
+                    <li>Lifetime access</li>
+                </ul>
+                <!-- Stripe Buy Button will go here -->
+                <a href="#" class="cta-button" id="checkout-button">Get The Shift Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <h2>About Joy</h2>
+            <p>I'm Joy, and I believe selling is an act of love. Not the pushy, manipulative kind — but the kind where you genuinely help someone get what they need. I created this guide for people who want to sell but hate how it feels. There's a better way, and I'm here to show you.</p>
+            <div class="social-links">
+                <a href="https://twitter.com/joyofselling" target="_blank">Twitter/X</a>
+                <a href="https://instagram.com/joyofselling" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-quote">"Selling is an act of love when done right."</p>
+            <p>© 2026 Joy of Selling • <a href="mailto:nakup@kirs.cz">Contact</a></p>
+        </div>
+    </footer>
+
+    <!-- Stripe Integration (placeholder - needs API key) -->
+    <script>
+        // Stripe checkout will be configured here once API key is provided
+        document.getElementById('checkout-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Payment integration coming soon! Contact nakup@kirs.cz for early access.');
+        });
+    </script>
+</body>
+</html>
