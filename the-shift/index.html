@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shift — Stop Selling. Start Sharing.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #FFFDF7;
+            color: #1F1F1F;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto 32px;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #1F1F1F;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: #D4A574;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hook {
+            font-size: 1.15rem;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 32px;
+            font-style: italic;
+        }
+
+        .features {
+            text-align: left;
+            margin-bottom: 32px;
+            padding: 0 20px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .feature-check {
+            color: #D4A574;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .price-section {
+            margin-bottom: 24px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1F1F1F;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 4px;
+        }
+
+        .buy-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #D4A574 0%, #C49566 100%);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 18px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(212, 165, 116, 0.5);
+        }
+
+        .guarantee {
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .footer {
+            margin-top: 48px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        .footer a {
+            color: #D4A574;
+            text-decoration: none;
+        }
+
+        /* Placeholder for product image */
+        .product-placeholder {
+            width: 100%;
+            max-width: 360px;
+            aspect-ratio: 1;
+            margin: 0 auto 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1F1F1F 0%, #333 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-placeholder .title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-placeholder .subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .product-placeholder .emoji {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Product Cover -->
+        <div class="product-image">
+            <img src="cover-the-shift-2026-02-07.png" alt="The Shift - Stop Pushing. Start Enjoying.">
+        </div>
+
+        <!-- Headline -->
+        <h1>The Shift</h1>
+        <p class="tagline">Stop Pushing. Start Enjoying.</p>
+
+        <!-- Hook -->
+        <p class="hook">
+            What if asking for money could feel like giving a gift?
+        </p>
+
+        <!-- Features -->
+        <div class="features">
+            <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>The Core Shift — 10-page guide that rewires your relationship with money</span>
+            </div>
+            <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>7-Day Audio Companion — Daily 3-5 minute shifts delivered to your ears</span>
+            </div>
+            <div class="feature">
+                <span class="feature-check">✓</span>
+                <span>5 Scripts — Exact words to ask for money without the cringe</span>
+            </div>
+        </div>
+
+        <!-- Price -->
+        <div class="price-section">
+            <div class="price">$17</div>
+            <div class="price-note">One-time payment. Instant access.</div>
+        </div>
+
+        <!-- CTA -->
+        <a href="https://buy.stripe.com/PLACEHOLDER" class="buy-button" id="checkout-btn">Get The Shift →</a>
+
+        <!-- Guarantee -->
+        <p class="guarantee">
+            No risk. If it doesn't shift something for you, I'll refund every penny.
+        </p>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Joy of Selling · <a href="https://x.com/joyofselling">@joyofselling</a></p>
+        </div>
+
+    </div>
+</body>
+</html>
